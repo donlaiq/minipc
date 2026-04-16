@@ -29,4 +29,4 @@ could be interpreted as the numbers 10, 11, 12, and 13
 
 Here are the links to the articles:
 - [openSUSE Setup and ComfyUI workflows](https://github.com/Comfy-Org/ComfyUI/discussions/11500)
-- [OpenClaw Installation Guide for Linux]()
+- [OpenClaw Installation Guide for Linux](https://github.com/donlaiq/minipc/discussions/1)
