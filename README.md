@@ -15,18 +15,6 @@ to **_Disable_**; otherwise, the OS gets frozen in every single session. You are
 The great attraction for me was the field of diffusion models, and I've been trying several workflows on ComfyUI, but lately I've been quite busy trying several local LLM models. My main interest is in their coding skills and, to be honest, I haven't written anything about it yet, because even though it's funny to see their train of thought and, depending on the size of the model, the speed at which they write solutions, unfortunately they are wrong most of the time. Hopefully, I'll write some of my thoughts about it in the future.
 The aim of this project is to put together all my different tests with AI running on this mini PC, and have a reference guide to come back to a working state if I break something in the process.   
 
-Besides the links to the articles I'm writing, this site also seems to be a good place to put some code... GitHub <-> source code... you know... For the time being, I'm just adding this tiny script that makes my life much, much easier when I need to write a prompt for an LLM model. Perhaps I'll add something else in the future.
-
-When I write something, the _Enter_ key is of priceless value to let me read the text with more clarity. Unfortunately, within an LLM interface, it sends a command before I can finish my request. So, the approach I'm using right now is to write the prompt in a regular text editor, save the file as _prompt.txt_, and run the command **_python3 slash.py_**. It will generate a file called _output.txt_, which basically adds a slash and a white space ("/ ").
-The LLM model interprets that the prompt continues on the next line after the slash ("/"). 
-The whitespace was added because some models were merging tokens from two lines. For example:
-
-10 11
-12 13
-
-could be interpreted as the numbers 10, 11, 12, and 13
-
-
 Here are the links to the articles:
 - [openSUSE Setup and ComfyUI workflows](https://github.com/Comfy-Org/ComfyUI/discussions/11500)
 - [OpenClaw Installation Guide for Linux](https://github.com/donlaiq/minipc/discussions/1)
