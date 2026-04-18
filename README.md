@@ -18,3 +18,4 @@ The aim of this project is to put together all my different tests with AI runnin
 Here are the links to the articles:
 - [openSUSE Setup and ComfyUI workflows](https://github.com/Comfy-Org/ComfyUI/discussions/11500)
 - [OpenClaw Installation Guide for Linux](https://github.com/donlaiq/minipc/discussions/1)
+- [OpenClaw Use Cases](https://github.com/donlaiq/minipc/discussions/2)
