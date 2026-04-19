@@ -1,0 +1,32 @@
+# Problem 22: Palindrome Linked List
+
+**Difficulty:** Easy
+**Topic:** Linked List / Two Pointers
+
+## Statement
+
+Given the `head` of a singly linked list, return `true` if it is a palindrome or `false` otherwise.
+
+You must solve it in O(n) time and O(1) space.
+
+## Examples
+
+**Input:** `head = [1, 2, 2, 1]`
+**Output:** `true`
+
+**Input:** `head = [1, 2]`
+**Output:** `false`
+
+## Constraints
+
+- The number of nodes in the list is in the range `[1, 10^5]`.
+- `0 <= Node.val <= 9`
+
+## ListNode Definition
+
+```python
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+```

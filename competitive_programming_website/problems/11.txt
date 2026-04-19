@@ -1,0 +1,30 @@
+# Problem 11: Word Ladder
+
+**Difficulty:** Hard
+**Topic:** Breadth-First Search / Graph
+
+## Statement
+
+Given two words, `beginWord` and `endWord`, and a dictionary `wordList`, return the number of words in the shortest transformation sequence from `beginWord` to `endWord`, or 0 if no such sequence exists.
+
+Each word must differ by exactly one letter at a time, and every transformed word must exist in `wordList`.
+
+## Examples
+
+**Input:** `beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log","cog"]`
+**Output:** `5`
+**Explanation:** One shortest transformation is `"hit" -> "hot" -> "dot" -> "dog" -> "cog"`, with 5 words.
+
+**Input:** `beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log"]`
+**Output:** `0`
+**Explanation:** The `endWord` "cog" is not in wordList, so no transformation is possible.
+
+## Constraints
+
+- `1 <= beginWord.length <= 10`
+- `endWord.length == beginWord.length`
+- `1 <= wordList.length <= 5000`
+- `wordList[i].length == beginWord.length`
+- `beginWord`, `endWord`, and `wordList[i]` consist of lowercase English letters.
+- `beginWord != endWord`
+- All the words in wordList are unique.

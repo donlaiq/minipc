@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CP Platform — 50 Problems</title>
+<link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <h1 class="logo">🏆 CP Platform</h1>
+    <p class="subtitle">50 Competitive Programming Problems — Solve in Python</p>
+  </div>
+</header>
+
+<nav class="filter-bar" id="filter-bar">
+  <button class="filter-btn active" data-filter="all">All <span class="count">(50)</span></button>
+  <button class="filter-btn" data-filter="Easy">Easy <span class="count" id="cnt-easy"></span></button>
+  <button class="filter-btn" data-filter="Medium">Medium <span class="count" id="cnt-med"></span></button>
+  <button class="filter-btn" data-filter="Hard">Hard <span class="count" id="cnt-hard"></span></button>
+</nav>
+
+<main>
+  <div class="problems-grid" id="problems-grid"></div>
+</main>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <div class="modal-topbar">
+      <div>
+        <span class="q-badge" id="q-badge"></span>
+        <span class="modal-title" id="modal-title"></span>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center;">
+        <span class="diff-badge" id="modal-diff"></span>
+        <button class="close-btn" id="close-btn" onclick="closeModal()">✕</button>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="layout">
+        <div class="desc-panel">
+          <div class="panel-label">📄 Problem Description</div>
+          <div class="panel-content" id="desc-content"></div>
+        </div>
+        <div class="editor-panel">
+          <div class="panel-label">
+            🐍 Your Solution (Python)
+            <span class="status-label" id="editor-status">saved</span>
+          </div>
+          <div class="editor-wrap">
+            <textarea id="code-editor" spellcheck="false" placeholder="def solve(input):
+    # Write your solution here
+    pass"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="results-panel" id="results-panel" style="display:none;">
+        <div class="results-header" id="results-header"></div>
+        <ul class="test-list" id="test-list"></ul>
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-primary" id="btn-submit" onclick="submitCode()">▶ Submit</button>
+        <button class="btn btn-next" id="btn-next" style="display:none;" onclick="goNext()">Next Problem →</button>
+        <button class="btn btn-ghost" onclick="clearCode()">Clear</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="confetti-container" id="confetti"></div>
+
+<script src="static/app.js"></script>
+</body>
+</html>

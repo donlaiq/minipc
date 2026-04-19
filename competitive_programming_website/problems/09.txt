@@ -1,0 +1,22 @@
+# Problem 09: Longest Palindromic Substring
+
+**Difficulty:** Medium
+**Topic:** Dynamic Programming / Expand Around Center
+
+## Statement
+
+Given a string `s`, return the longest palindromic substring in `s`.
+
+## Examples
+
+**Input:** `s = "babad"`
+**Output:** `"bab"`
+**Explanation:** `"aba"` is also a valid answer.
+
+**Input:** `s = "cbbd"`
+**Output:** `"bb"`
+
+## Constraints
+
+- `1 <= s.length <= 1000`
+- `s` consists of only digits and English letters.

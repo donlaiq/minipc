@@ -1,0 +1,33 @@
+# Problem 29: Implement Queue using Stacks
+
+**Difficulty:** Easy
+**Topic:** Stack / Queue
+
+## Statement
+
+Implement a first in first out (FIFO) queue using only two stacks. The implemented queue should support all the operations of a normal queue:
+
+- `void push(int x)` - Pushes element x to the back of the queue.
+- `int pop()` - Removes the element from the front of the queue and returns it.
+- `int peek()` - Returns the element at the front of the queue.
+- `boolean empty()` - Returns true if the queue is empty.
+
+You must use only standard stack operations — those supported by any stack language: push to top, pop from top, size, and is empty.
+
+## Examples
+
+**Input:**
+```
+["MyQueue", "push", "push", "peek", "pop", "empty"]
+[[], [1], [2], [], [], []]
+```
+**Output:**
+```
+[null, null, null, 1, 1, false]
+```
+
+## Constraints
+
+- `1 <= x <= 10^4`
+- At most `100` calls will be made to `push`, `pop`, `peek`, and `empty`.
+- All the calls to `pop` and `peek` are valid.
