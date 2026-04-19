@@ -1,0 +1,5 @@
+# Tests for Question 26: Subsets
+{"name": "Standard example", "input": {"nums": [1,2,3]}, "expected": [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]], "description": "All 2^3 subsets"}
+{"name": "Single element", "input": {"nums": [0]}, "expected": [[],[0]], "description": "Two subsets"}
+{"name": "Empty array", "input": {"nums": []}, "expected": [[]], "description": "Only empty subset"}
+{"name": "Two elements", "input": {"nums": [1,2]}, "expected": [[],[1],[2],[1,2]], "description": "Four subsets"}

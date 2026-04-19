@@ -1,0 +1,30 @@
+# Tests for Question 35: Path Sum
+def make_tree(arr):
+    if not arr: return None
+    root = TreeNode(arr[0])
+    queue = [root]
+    i = 1
+    while i < len(arr):
+        node = queue.pop(0)
+        if arr[i] is not None:
+            node.left = TreeNode(arr[i])
+            queue.append(node.left)
+        i += 1
+        if i < len(arr):
+            if arr[i] is not None:
+                node.right = TreeNode(arr[i])
+                queue.append(node.right)
+            i += 1
+    return root
+
+def pathSumWrapper(tree_arr, target):
+    root = make_tree(tree_arr)
+    return hasPathSum(root, target)
+
+{"name": "Standard example", "input": {"tree_arr": [5,4,8,11,None,13,4,7,2,None,None,None,1], "target": 22}, "expected": True, "description": "Path exists"}
+{"name": "No path exists", "input": {"tree_arr": [1,2,3], "target": 5}, "expected": False, "description": "No path sums to target"}
+{"name": "Empty tree", "input": {"tree_arr": [], "target": 0}, "expected": False, "description": "Empty tree"}
+{"name": "Single node matches", "input": {"tree_arr": [1], "target": 1}, "expected": True, "description": "Single node path matches"}
+{"name": "Single node doesn't match", "input": {"tree_arr": [1], "target": 2}, "expected": False, "description": "Single node path doesn't match"}
+{"name": "Left leaf path", "input": {"tree_arr": [1,2,None], "target": 3}, "expected": True, "description": "Left child path"}
+{"name": "Right leaf path", "input": {"tree_arr": [1,None,2], "target": 3}, "expected": True, "description": "Right child path"}

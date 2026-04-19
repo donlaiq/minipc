@@ -1,0 +1,26 @@
+# Tests for Question 43: Rotate List
+def make_list(arr):
+    if not arr: return None
+    head = ListNode(arr[0])
+    curr = head
+    for v in arr[1:]:
+        curr.next = ListNode(v)
+        curr = curr.next
+    return head
+def list_to_array(head):
+    result = []
+    while head:
+        result.append(head.val)
+        head = head.next
+    return result
+def rotateListWrapper(arr, k):
+    head = make_list(arr)
+    new_head = rotateList(head, k)
+    return list_to_array(new_head)
+
+{"name": "Standard example", "input": {"arr": [1,2,3,4,5], "k": 2}, "expected": [4,5,1,2,3], "description": "Rotate right by 2"}
+{"name": "k > length", "input": {"arr": [0,1,2], "k": 4}, "expected": [2,0,1], "description": "k=4 wraps around"}
+{"name": "Empty list", "input": {"arr": [], "k": 0}, "expected": [], "description": "Nothing to rotate"}
+{"name": "Single element", "input": {"arr": [1], "k": 1}, "expected": [1], "description": "Single element stays"}
+{"name": "k=0", "input": {"arr": [1,2,3], "k": 0}, "expected": [1,2,3], "description": "No rotation"}
+{"name": "k=length", "input": {"arr": [1,2,3], "k": 3}, "expected": [1,2,3], "description": "Full rotation = no change"}

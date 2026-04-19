@@ -1,0 +1,9 @@
+# Tests for Question 48: Zigzag Conversion
+{"name": "Standard n=3", "input": {"s": "PAYPALISHIRING", "numRows": 3}, "expected": "PAHNAPLSIIGYIR", "description": "Standard zigzag"}
+{"name": "n=4 example", "input": {"s": "PAYPALISHIRING", "numRows": 4}, "expected": "PINALSIGYAHRPI", "description": "4 rows zigzag"}
+{"name": "n=1", "input": {"s": "A", "numRows": 1}, "expected": "A", "description": "Single row"}
+{"name": "Single char", "input": {"s": "ABC", "numRows": 1}, "expected": "ABC", "description": "Single row multiple chars"}
+{"name": "Full zigzag n=3", "input": {"s": "AB", "numRows": 3}, "expected": "AB", "description": "Too short for zigzag"}
+{"name": "n equals length", "input": {"s": "ABC", "numRows": 3}, "expected": "ABC", "description": "Each char in its own row"}
+{"name": "n=2", "input": {"s": "ABCD", "numRows": 2}, "expected": "ACBD", "description": "Two rows"}
+{"name": "Empty string", "input": {"s": "", "numRows": 3}, "expected": "", "description": "Empty string"}

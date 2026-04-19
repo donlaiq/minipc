@@ -1,0 +1,25 @@
+# Tests for Question 27: Reverse Linked List
+def make_list(arr):
+    if not arr: return None
+    head = ListNode(arr[0])
+    curr = head
+    for v in arr[1:]:
+        curr.next = ListNode(v)
+        curr = curr.next
+    return head
+def list_to_array(head):
+    result = []
+    while head:
+        result.append(head.val)
+        head = head.next
+    return result
+def reverseListWrapper(arr):
+    head = make_list(arr)
+    new_head = reverseList(head)
+    return list_to_array(new_head)
+
+{"name": "Standard example", "input": {"arr": [1,2,3,4,5]}, "expected": [5,4,3,2,1], "description": "Reverse 5 elements"}
+{"name": "Two elements", "input": {"arr": [1,2]}, "expected": [2,1], "description": "Swap two"}
+{"name": "Empty list", "input": {"arr": []}, "expected": [], "description": "Nothing to reverse"}
+{"name": "Single element", "input": {"arr": [1]}, "expected": [1], "description": "Single element stays"}
+{"name": "Three elements", "input": {"arr": [1,2,3]}, "expected": [3,2,1], "description": "Reverse three"}

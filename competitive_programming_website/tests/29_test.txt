@@ -1,0 +1,19 @@
+# Tests for Question 29: Implement Queue using Stacks
+def test_queue(operations):
+    q = MyQueue()
+    results = []
+    for op in operations:
+        if op["op"] == "push":
+            q.push(op["x"])
+            results.append(None)
+        elif op["op"] == "pop":
+            results.append(q.pop())
+        elif op["op"] == "peek":
+            results.append(q.peek())
+        elif op["op"] == "empty":
+            results.append(q.empty())
+    return results
+
+{"name": "Standard example", "input": {"operations": [{"op": "push", "x": 1}, {"op": "push", "x": 2}, {"op": "peek"}, {"op": "pop"}, {"op": "empty"}]}, "expected": [None, None, 1, 1, False], "description": "Push, push, peek, pop, empty"}
+{"name": "Empty queue operations", "input": {"operations": [{"op": "empty"}]}, "expected": [True], "description": "Empty check on new queue"}
+{"name": "Push then pop then push", "input": {"operations": [{"op": "push", "x": 1}, {"op": "pop"}, {"op": "empty"}]}, "expected": [None, 1, True], "description": "Push pop, then empty"}

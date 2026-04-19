@@ -1,0 +1,19 @@
+# Tests for Question 34: Range Sum Query - Immutable
+
+class NumArray:
+    def __init__(self, nums):
+        self.prefix = [0] * (len(nums) + 1)
+        for i, num in enumerate(nums):
+            self.prefix[i + 1] = self.prefix[i] + num
+    def sumRange(self, left, right):
+        return self.prefix[right + 1] - self.prefix[left]
+
+def test_numarray(nums):
+    na = NumArray(nums)
+    return na
+
+{"name": "Standard example", "input": {"nums": [-2,0,3,-5,2,-1]}, "expected": "NumArray", "description": "Test via sumRange calls"}
+{"name": "Single element", "input": {"nums": [5]}, "expected": "NumArray", "description": "Single element"}
+{"name": "All zeros", "input": {"nums": [0,0,0]}, "expected": "NumArray", "description": "All zeros"}
+{"name": "Negative numbers", "input": {"nums": [-1,-2,-3]}, "expected": "NumArray", "description": "All negative"}
+{"name": "Large array", "input": {"nums": [1]*10000}, "expected": "NumArray", "description": "Large array"}

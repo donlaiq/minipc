@@ -1,0 +1,30 @@
+# Tests for Question 21: Clone Graph
+def make_graph(adj_list):
+    if not adj_list: return None
+    nodes = [Node(i+1) for _ in range(len(adj_list))]
+    for i, neighbors in enumerate(adj_list):
+        for n in neighbors:
+            nodes[i].neighbors.append(nodes[n-1])
+    return nodes[0]
+
+def count_nodes(node):
+    if not node: return 0
+    visited = set()
+    stack = [node]
+    while stack:
+        n = stack.pop()
+        if n.val in visited: continue
+        visited.add(n.val)
+        for nb in n.neighbors:
+            if nb.val not in visited:
+                stack.append(nb)
+    return len(visited)
+
+def test_cloneGraph(adj_list):
+    node = make_graph(adj_list)
+    cloned = cloneGraph(node)
+    return {"nodes": len(adj_list), "cloned_nodes": count_nodes(cloned) if cloned else 0}
+
+{"name": "Standard example", "input": {"adj_list": [[2,4],[1,3],[2,4],[1,3]]}, "expected": {"nodes": 4, "cloned_nodes": 4}, "description": "4-node graph"}
+{"name": "Single node", "input": {"adj_list": [[]]}, "expected": {"nodes": 1, "cloned_nodes": 1}, "description": "One node, no neighbors"}
+{"name": "Empty graph", "input": {"adj_list": []}, "expected": None, "description": "No nodes"}

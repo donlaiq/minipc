@@ -1,0 +1,19 @@
+# Tests for Question 2: Longest Substring Without Repeating Characters
+{"name": "All same chars", "input": {"s": "aaaa"}, "expected": 1, "description": "Single character repeated"}
+{"name": "Empty string", "input": {"s": ""}, "expected": 0, "description": "Edge case: empty string"}
+{"name": "Single character", "input": {"s": "a"}, "expected": 1, "description": "Edge case: single character"}
+{"name": "All unique", "input": {"s": "abcdef"}, "expected": 6, "description": "No repeating characters"}
+{"name": "Basic repeating", "input": {"s": "abcabcbb"}, "expected": 3, "description": "Classic example: abc"}
+{"name": "Repeated pattern", "input": {"s": "bbb"}, "expected": 1, "description": "All same character"}
+{"name": "Mixed with repeat", "input": {"s": "pwwkew"}, "expected": 3, "description": "Example with 'wke'"}
+{"name": "Two repeating sections", "input": {"s": "aab"}, "expected": 2, "description": "aa repeats, ab is longest"}
+{"name": "Alternating", "input": {"s": "abababab"}, "expected": 2, "description": "Alternating a and b"}
+{"name": "Unique prefix", "input": {"s": "abcdeedc"}, "expected": 5, "description": "abcde is longest unique prefix"}
+{"name": "Single repeat at end", "input": {"s": "abcdefgabcdefg"}, "expected": 7, "description": "Half of string is unique"}
+{"name": "Two distinct alternating", "input": {"s": "abababab"}, "expected": 2, "description": "ab repeats, length 2"}
+{"name": "Palindrome-like", "input": {"s": "abcba"}, "expected": 3, "description": "abc is longest unique"}
+{"name": "Complex repeating", "input": {"s": "dvdf"}, "expected": 3, "description": "vdf is longest"}
+{"name": "Prefix repeat then different", "input": {"s": "aaaaabc"}, "expected": 3, "description": "aabc has length 4"}
+{"name": "Single char repeated", "input": {"s": "z"}, "expected": 1, "description": "Single character"}
+{"name": "Two chars repeating", "input": {"s": "abababababababab"}, "expected": 2, "description": "ab repeats"}
+{"name": "Numeric string", "input": {"s": "12345678901234567890"}, "expected": 10, "description": "Numbers only"}

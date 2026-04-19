@@ -1,0 +1,36 @@
+# Tests for Question 20: Maximum Depth of Binary Tree
+def make_tree(arr):
+    if not arr: return None
+    root = TreeNode(arr[0])
+    queue = [root]
+    i = 1
+    while i < len(arr):
+        node = queue.pop(0)
+        if arr[i] is not None:
+            node.left = TreeNode(arr[i])
+            queue.append(node.left)
+        i += 1
+        if i < len(arr):
+            if arr[i] is not None:
+                node.right = TreeNode(arr[i])
+                queue.append(node.right)
+            i += 1
+    return root
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def test_maxDepth(tree_arr):
+    root = make_tree(tree_arr)
+    return maxDepth(root)
+
+{"name": "Standard tree", "input": {"tree_arr": [3, 9, 20, null, null, 15, 17]}, "expected": 3, "description": "Standard example tree"}
+{"name": "Single node", "input": {"tree_arr": [1]}, "expected": 1, "description": "Just root"}
+{"name": "Empty tree", "input": {"tree_arr": []}, "expected": 0, "description": "No nodes"}
+{"name": "Two nodes", "input": {"tree_arr": [1, null, 2]}, "expected": 2, "description": "Two nodes in line"}
+{"name": "Balanced tree", "input": {"tree_arr": [1, 2, 3, 4, 5, 6, 7]}, "expected": 3, "description": "Full binary tree"}
+{"name": "Skewed left", "input": {"tree_arr": [1, 2, 3, 4, 5]}, "expected": 3, "description": "Skewed to left"}
+{"name": "Deep right", "input": {"tree_arr": [1, null, 2, null, 3, null, 4]}, "expected": 4, "description": "Skewed to right"}

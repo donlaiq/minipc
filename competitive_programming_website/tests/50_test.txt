@@ -1,0 +1,11 @@
+# Tests for Question 50: Edit Distance (Levenshtein Distance)
+{"name": "Standard example", "input": {"word1": "horse", "word2": "ros"}, "expected": 3, "description": "horse->rorse->rose->ros"}
+{"name": "Standard example 2", "input": {"word1": "intention", "word2": "execution"}, "expected": 5, "description": "5 operations needed"}
+{"name": "Same words", "input": {"word1": "abc", "word2": "abc"}, "expected": 0, "description": "Zero distance"}
+{"name": "One word empty", "input": {"word1": "", "word2": "abc"}, "expected": 3, "description": "Need 3 insertions"}
+{"name": "Both empty", "input": {"word1": "", "word2": ""}, "expected": 0, "description": "Zero distance"}
+{"name": "Single char difference", "input": {"word1": "a", "word2": "b"}, "expected": 1, "description": "One replacement"}
+{"name": "Insertion needed", "input": {"word1": "abc", "word2": "abcd"}, "expected": 1, "description": "One insertion"}
+{"name": "Deletion needed", "input": {"word1": "abcd", "word2": "abc"}, "expected": 1, "description": "One deletion"}
+{"name": "Completely different", "input": {"word1": "abc", "word2": "def"}, "expected": 3, "description": "All three replaced"}
+{"name": "Prefix match", "input": {"word1": "kitten", "word2": "sitting"}, "expected": 3, "description": "kitten->sitten->sitting"}

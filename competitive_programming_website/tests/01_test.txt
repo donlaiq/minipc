@@ -1,0 +1,16 @@
+# Tests for Question 1: Two Sum
+{"name": "Basic positive integers", "input": {"nums": [2, 7, 11, 15], "target": 9}, "expected": [0, 1], "description": "Standard two sum case"}
+{"name": "Same element used twice", "input": {"nums": [3, 2, 4], "target": 6}, "expected": [1, 2], "description": "Elements at different indices"}
+{"name": "Two identical elements", "input": {"nums": [3, 3], "target": 6}, "expected": [0, 1], "description": "Both elements are the same value"}
+{"name": "Negative numbers", "input": {"nums": [-1, -2, -3, -4, -5], "target": -8}, "expected": [2, 4], "description": "All negative values"}
+{"name": "Mixed positive and negative", "input": {"nums": [3, -1, 4, -2, 5], "target": 2}, "expected": [0, 1], "description": "Mix of positive and negative"}
+{"name": "Target is zero", "input": {"nums": [0, 4, 3, 0], "target": 0}, "expected": [0, 3], "description": "Target is zero, two zeros in array"}
+{"name": "Large positive values", "input": {"nums": [1000000000, 1000000000], "target": 2000000000}, "expected": [0, 1], "description": "Large values near constraint limit"}
+{"name": "Large negative values", "input": {"nums": [-1000000000, -1000000000], "target": -2000000000}, "expected": [0, 1], "description": "Large negative values near constraint limit"}
+{"name": "Solution uses first two", "input": {"nums": [1, 2, 3, 4], "target": 3}, "expected": [0, 1], "description": "Target at the beginning"}
+{"name": "Solution uses last two", "input": {"nums": [1, 2, 3, 4], "target": 7}, "expected": [2, 3], "description": "Target at the end"}
+{"name": "Middle pair", "input": {"nums": [1, 2, 3, 4, 5], "target": 7}, "expected": [2, 3], "description": "Adjacent solution in middle"}
+{"name": "First and last", "input": {"nums": [1, 5, 3, 9], "target": 10}, "expected": [0, 3], "description": "Solution spans first and last"}
+{"name": "All same non-zero", "input": {"nums": [5, 5, 5], "target": 10}, "expected": [0, 1], "description": "All elements same value"}
+{"name": "Zero helps", "input": {"nums": [5, 0, 5], "target": 5}, "expected": [0, 1], "description": "Zero helps reach target"}
+{"name": "Two zeros", "input": {"nums": [0, 0], "target": 0}, "expected": [0, 1], "description": "Minimal case with zeros"}

@@ -1,0 +1,8 @@
+# Tests for Question 24: Word Break
+{"name": "Standard example", "input": {"s": "leetcode", "wordDict": ["leet","code"]}, "expected": True, "description": "leet code"}
+{"name": "Two words", "input": {"s": "applepenapple", "wordDict": ["apple","pen"]}, "expected": True, "description": "apple pen apple"}
+{"name": "Impossible", "input": {"s": "catsandog", "wordDict": ["cats","dog","sand","and","cat"]}, "expected": False, "description": "catsandog cannot be segmented"}
+{"name": "Single word", "input": {"s": "catsandog", "wordDict": ["catsandog"]}, "expected": True, "description": "Whole string is one word"}
+{"name": "Empty string", "input": {"s": "", "wordDict": ["a"]}, "expected": True, "description": "Empty string is valid"}
+{"name": "Single letter repeated", "input": {"s": "aaaa", "wordDict": ["a"]}, "expected": True, "description": "Each letter can be a word"}
+{"name": "Overlapping words", "input": {"s": "catsandog", "wordDict": ["cat","cats","sand","dog","and"]}, "expected": False, "description": "No valid non-overlapping segmentation"}

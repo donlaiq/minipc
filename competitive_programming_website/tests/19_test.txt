@@ -1,0 +1,10 @@
+# Tests for Question 19: Number of Islands
+{"name": "Single island", "input": {"grid": [["1","1","1","1","0"],["1","1","0","1","0"],["1","1","0","0","0"],["0","0","0","0","0"]]}, "expected": 1, "description": "All connected"}
+{"name": "Three islands", "input": {"grid": [["1","1","0","0","0"],["1","1","0","0","0"],["0","0","1","0","0"],["0","0","0","1","1"]]}, "expected": 3, "description": "Three separate islands"}
+{"name": "No islands", "input": {"grid": [["0","0","0"],["0","0","0"]]}, "expected": 0, "description": "No land"}
+{"name": "All land", "input": {"grid": [["1","1"],["1","1"]]}, "expected": 1, "description": "Everything is land"}
+{"name": "Single island 1x1", "input": {"grid": [["1"]]}, "expected": 1, "description": "Single cell island"}
+{"name": "All water 1x1", "input": {"grid": [["0"]]}, "expected": 0, "description": "Single water cell"}
+{"name": "Vertical island", "input": {"grid": [["1"],["1"],["1"]]}, "expected": 1, "description": "Vertical connection"}
+{"name": "Diagonal no connection", "input": {"grid": [["1","0"],["0","1"]]}, "expected": 2, "description": "Diagonal is not connected"}
+{"name": "Checkerboard", "input": {"grid": [["1","0","1"],["0","1","0"],["1","0","1"]]}, "expected": 5, "description": "No connections between 1s"}

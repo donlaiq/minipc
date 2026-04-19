@@ -1,0 +1,7 @@
+# Tests for Question 47: Unique Permutations II
+{"name": "Standard example", "input": {"nums": [1,1,2]}, "expected": [[1,1,2],[1,2,1],[2,1,1]], "description": "3 unique permutations"}
+{"name": "All same", "input": {"nums": [1,1,1]}, "expected": [[1,1,1]], "description": "Only one unique permutation"}
+{"name": "All different", "input": {"nums": [1,2,3]}, "expected": [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]], "description": "6 permutations"}
+{"name": "Two elements same", "input": {"nums": [2,2]}, "expected": [[2,2]], "description": "One unique permutation"}
+{"name": "Duplicates many", "input": {"nums": [1,1,2,2]}, "expected": [[1,1,2,2],[1,2,1,2],[1,2,2,1],[2,1,1,2],[2,1,2,1],[2,2,1,1]], "description": "6 unique permutations"}
+{"name": "Single element", "input": {"nums": [5]}, "expected": [[5]], "description": "One permutation"}

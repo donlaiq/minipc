@@ -1,0 +1,16 @@
+# Tests for Question 3: Median of Two Sorted Arrays
+{"name": "Both have one element odd total", "input": {"nums1": [1, 3], "nums2": [2]}, "expected": 2.0, "description": "Odd total elements, answer is 2"}
+{"name": "Both have two elements even total", "input": {"nums1": [1, 2], "nums2": [3, 4]}, "expected": 2.5, "description": "Even total elements, answer is 2.5"}
+{"name": "One empty array", "input": {"nums1": [], "nums2": [1]}, "expected": 1.0, "description": "One array is empty"}
+{"name": "Both empty impossible", "input": {"nums1": [3], "nums2": [-2, -1]}, "expected": -1.0, "description": "nums1=[3], nums2=[-2,-1]"}
+{"name": "Negative values", "input": {"nums1": [-5, -3, -1], "nums2": [-4, -2, 0]}, "expected": -2.5, "description": "All negative values"}
+{"name": "Large first array", "input": {"nums1": [1, 2, 3, 4, 5], "nums2": [6, 7]}, "expected": 4.0, "description": "Large first, small second"}
+{"name": "Same elements", "input": {"nums1": [1, 2], "nums2": [1, 2]}, "expected": 1.5, "description": "Arrays have same elements"}
+{"name": "Completely disjoint even", "input": {"nums1": [1, 3, 5], "nums2": [2, 4, 6]}, "expected": 3.5, "description": "Interleaved sorted arrays"}
+{"name": "Single elements both", "input": {"nums1": [2], "nums2": [1]}, "expected": 1.5, "description": "Both single element"}
+{"name": "Negatives mixed with positives", "input": {"nums1": [-3, -2, -1], "nums2": [1, 2, 3]}, "expected": 0.0, "description": "Negatives and positives"}
+{"name": "First array larger", "input": {"nums1": [1, 2, 3, 4, 5], "nums2": [6]}, "expected": 3.5, "description": "First array much larger"}
+{"name": "Second array larger", "input": {"nums1": [6], "nums2": [1, 2, 3, 4, 5]}, "expected": 3.5, "description": "Second array much larger"}
+{"name": "All same values", "input": {"nums1": [5, 5, 5], "nums2": [5, 5]}, "expected": 5.0, "description": "All elements are the same"}
+{"name": "Min values", "input": {"nums1": [-1000000, -500000], "nums2": [-1000000, -500000]}, "expected": -750000.0, "description": "Smallest possible values"}
+{"name": "Max values", "input": {"nums1": [500000, 1000000], "nums2": [500000, 1000000]}, "expected": 750000.0, "description": "Largest possible values"}

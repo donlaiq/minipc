@@ -1,0 +1,9 @@
+# Tests for Question 41: Merge Intervals
+{"name": "Standard example", "input": {"intervals": [[1,3],[2,6],[8,10],[15,18]]}, "expected": [[1,6],[8,10],[15,18]], "description": "Merge [1,3] and [2,6]"}
+{"name": "Touching intervals", "input": {"intervals": [[1,4],[4,5]]}, "expected": [[1,5]], "description": "Touching intervals merge"}
+{"name": "All overlap", "input": {"intervals": [[1,4],[0,4],[3,6]]}, "expected": [[0,6]], "description": "All merge into one"}
+{"name": "No overlap", "input": {"intervals": [[1,2],[3,4],[5,6]]}, "expected": [[1,2],[3,4],[5,6]], "description": "None overlap"}
+{"name": "Empty input", "input": {"intervals": []}, "expected": [], "description": "No intervals"}
+{"name": "Single interval", "input": {"intervals": [[1,4]]}, "expected": [[1,4]], "description": "One interval"}
+{"name": "Nested intervals", "input": {"intervals": [[1,10],[2,5]]}, "expected": [[1,10]], "description": "Inner interval is subset"}
+{"name": "Reverse order", "input": {"intervals": [[6,8],[1,9],[2,4],[4,7]]}, "expected": [[1,9]], "description": "All merge after sorting"}

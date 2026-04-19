@@ -1,0 +1,13 @@
+# Tests for Question 09: Longest Palindromic Substring
+{"name": "Standard example", "input": {"s": "babad"}, "expected": "bab", "description": "bab or aba (both valid)"}
+{"name": "Even palindrome", "input": {"s": "cbbd"}, "expected": "bb", "description": "Even-length palindrome"}
+{"name": "Single character", "input": {"s": "a"}, "expected": "a", "description": "Single character"}
+{"name": "Empty string", "input": {"s": ""}, "expected": "", "description": "Empty string"}
+{"name": "All same chars", "input": {"s": "aaaa"}, "expected": "aaaa", "description": "Whole string is palindrome"}
+{"name": "Already palindrome", "input": {"s": "racecar"}, "expected": "racecar", "description": "Whole string is a palindrome"}
+{"name": "Two chars same", "input": {"s": "aa"}, "expected": "aa", "description": "Two same characters"}
+{"name": "Two chars different", "input": {"s": "ab"}, "expected": "a", "description": "Any single char is valid"}
+{"name": "Long palindrome in middle", "input": {"s": "abcba"}, "expected": "abcba", "description": "Whole string is palindrome"}
+{"name": "Multiple palindromes", "input": {"s": "cbbad"}, "expected": "bb", "description": "Longest is bb"}
+{"name": "Odd and even both", "input": {"s": "forgeeksskeegfor"}, "expected": "geeksskeeg", "description": "Longer even palindrome"}
+{"name": "Just two chars", "input": {"s": "xy"}, "expected": "x", "description": "Any single char is valid"}

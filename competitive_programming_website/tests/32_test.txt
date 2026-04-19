@@ -1,0 +1,12 @@
+# Tests for Question 32: Sqrt(x)
+{"name": "Perfect square", "input": {"x": 4}, "expected": 2, "description": "Sqrt of 4"}
+{"name": "Not perfect square", "input": {"x": 8}, "expected": 2, "description": "Floor of 2.828..."}
+{"name": "Zero", "input": {"x": 0}, "expected": 0, "description": "Sqrt of 0"}
+{"name": "One", "input": {"x": 1}, "expected": 1, "description": "Sqrt of 1"}
+{"name": "Perfect square 1", "input": {"x": 1}, "expected": 1, "description": "Sqrt of 1"}
+{"name": "Perfect square 16", "input": {"x": 16}, "expected": 4, "description": "Sqrt of 16"}
+{"name": "Perfect square 25", "input": {"x": 25}, "expected": 5, "description": "Sqrt of 25"}
+{"name": "Just below perfect square", "input": {"x": 3}, "expected": 1, "description": "Floor of 1.732..."}
+{"name": "Just above perfect square", "input": {"x": 5}, "expected": 2, "description": "Floor of 2.236..."}
+{"name": "Max int", "input": {"x": 2147395600}, "expected": 46340, "description": "46340^2 = 2147395600"}
+{"name": "Max int - 1", "input": {"x": 2147395599}, "expected": 46339, "description": "Floor of sqrt(max_int-1)"}

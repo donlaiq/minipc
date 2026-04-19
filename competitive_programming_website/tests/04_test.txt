@@ -1,0 +1,14 @@
+# Tests for Question 4: Container With Most Water
+{"name": "Standard example", "input": {"height": [1, 8, 6, 2, 5, 4, 8, 3, 7]}, "expected": 49, "description": "Classic container example"}
+{"name": "Two equal heights", "input": {"height": [1, 1]}, "expected": 1, "description": "Minimum case"}
+{"name": "Two different heights", "input": {"height": [1, 2]}, "expected": 1, "description": "Two elements different"}
+{"name": "Single tall bar", "input": {"height": [1, 10000]}, "expected": 1, "description": "Short bar limits height"}
+{"name": "Peak in middle", "input": {"height": [3, 3, 3, 10, 3, 3, 3]}, "expected": 18, "description": "Tallest bar in center"}
+{"name": "Decreasing then increasing", "input": {"height": [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}, "expected": 180, "description": "U-shaped pattern"}
+{"name": "Increasing then decreasing", "input": {"height": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]}, "expected": 50, "description": "Inverted U pattern"}
+{"name": "All zeros", "input": {"height": [0, 0, 0, 0]}, "expected": 0, "description": "No water can be trapped"}
+{"name": "Two tall bars far apart", "input": {"height": [100, 1, 1, 1, 1, 1, 100]}, "expected": 600, "description": "Wide container"}
+{"name": "All same height", "input": {"height": [5, 5, 5, 5]}, "expected": 15, "description": "Uniform height"}
+{"name": "First is tallest", "input": {"height": [10, 1, 2, 3, 4, 5]}, "expected": 25, "description": "First bar is tallest"}
+{"name": "Last is tallest", "input": {"height": [5, 4, 3, 2, 1, 10]}, "expected": 25, "description": "Last bar is tallest"}
+{"name": "Max constraint values", "input": {"height": [10000, 1, 1, 1, 1, 1, 1, 1, 1, 1, 10000]}, "expected": 100000, "description": "Max height constraint"}

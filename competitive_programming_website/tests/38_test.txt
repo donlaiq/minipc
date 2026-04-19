@@ -1,0 +1,9 @@
+# Tests for Question 38: Kth Largest Element in an Array
+{"name": "Standard example k=2", "input": {"nums": [3,2,1,5,6,4], "k": 2}, "expected": 5, "description": "2nd largest is 5"}
+{"name": "Standard example k=4", "input": {"nums": [3,2,3,1,2,4,5,5,6], "k": 4}, "expected": 4, "description": "4th largest is 4"}
+{"name": "k equals length", "input": {"nums": [1,2], "k": 2}, "expected": 1, "description": "Smallest element"}
+{"name": "k=1", "input": {"nums": [3,2,1,5,6,4], "k": 1}, "expected": 6, "description": "Largest element"}
+{"name": "Single element", "input": {"nums": [1], "k": 1}, "expected": 1, "description": "Only element"}
+{"name": "All same", "input": {"nums": [2,2,2,2], "k": 3}, "expected": 2, "description": "All elements same"}
+{"name": "Negative numbers", "input": {"nums": [-1,-2,-3,-4], "k": 1}, "expected": -1, "description": "Largest of negatives"}
+{"name": "Large k", "input": {"nums": [1,2,3,4,5], "k": 5}, "expected": 1, "description": "Smallest in 5 elements"}

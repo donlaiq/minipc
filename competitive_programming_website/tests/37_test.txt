@@ -1,0 +1,13 @@
+# Tests for Question 37: Regular Expression Matching
+{"name": "aa vs a", "input": {"s": "aa", "p": "a"}, "expected": False, "description": "Pattern doesn't match full string"}
+{"name": "aa vs a*", "input": {"s": "aa", "p": "a*"}, "expected": True, "description": "a* matches aa"}
+{"name": "ab vs .*", "input": {"s": "ab", "p": ".*"}, "expected": True, "description": ".* matches anything"}
+{"name": "aab vs c*a*b*", "input": {"s": "aab", "p": "c*a*b*"}, "expected": True, "description": "c*a*b* matches aab"}
+{"name": "mississippi vs mis*is*ip*", "input": {"s": "mississippi", "p": "mis*is*ip*"}, "expected": False, "description": "Pattern doesn't match"}
+{"name": "empty vs empty", "input": {"s": "", "p": ""}, "expected": True, "description": "Empty matches empty"}
+{"name": "empty vs a*", "input": {"s": "", "p": "a*"}, "expected": True, "description": "a* can match empty"}
+{"name": "abc vs a.c", "input": {"s": "abc", "p": "a.c"}, "expected": True, "description": ". matches any char"}
+{"name": "abcd vs a*c*", "input": {"s": "abcd", "p": "a*c*"}, "expected": False, "description": "a*c* only matches a's and c's"}
+{"name": "a vs .*", "input": {"s": "a", "p": ".*"}, "expected": True, "description": "Single char vs .*"}
+{"name": "aaa vs aa*", "input": {"s": "aaa", "p": "aa*"}, "expected": True, "description": "aa* matches aaa"}
+{"name": "ab vs .*b", "input": {"s": "ab", "p": ".*b"}, "expected": True, "description": ".*b matches ab"}

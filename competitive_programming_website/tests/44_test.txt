@@ -1,0 +1,11 @@
+# Tests for Question 44: Wildcard Matching
+{"name": "aa vs a", "input": {"s": "aa", "p": "a"}, "expected": False, "description": "a doesn't match aa"}
+{"name": "aa vs *", "input": {"s": "aa", "p": "*"}, "expected": True, "description": "* matches anything"}
+{"name": "cb vs ?a", "input": {"s": "cb", "p": "?a"}, "expected": False, "description": "? matches c, but a doesn't match b"}
+{"name": "empty vs empty", "input": {"s": "", "p": ""}, "expected": True, "description": "Empty matches empty"}
+{"name": "empty vs *", "input": {"s": "", "p": "*"}, "expected": True, "description": "* matches empty"}
+{"name": "abc vs ?*?", "input": {"s": "abc", "p": "?*?"}, "expected": True, "description": "?*? matches abc"}
+{"name": "a vs *", "input": {"s": "a", "p": "*"}, "expected": True, "description": "* matches single char"}
+{"name": "acdcb vs a*c?b", "input": {"s": "acdcb", "p": "a*c?b"}, "expected": False, "description": "Pattern doesn't match"}
+{"name": "a vs ?", "input": {"s": "a", "p": "?"}, "expected": True, "description": "? matches single char"}
+{"name": "aaa vs aaa*", "input": {"s": "aaa", "p": "aaa*"}, "expected": True, "description": "aaa* matches aaa"}

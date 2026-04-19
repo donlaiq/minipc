@@ -1,0 +1,11 @@
+# Tests for Question 13: Coin Change
+{"name": "Standard example", "input": {"coins": [1, 2, 5], "amount": 11}, "expected": 3, "description": "11 = 5+5+1"}
+{"name": "Impossible", "input": {"coins": [2], "amount": 3}, "expected": -1, "description": "Cannot make 3 with coin 2"}
+{"name": "Zero amount", "input": {"coins": [1], "amount": 0}, "expected": 0, "description": "Zero amount needs zero coins"}
+{"name": "Single coin", "input": {"coins": [1], "amount": 5}, "expected": 5, "description": "Only coin 1 available"}
+{"name": "Exact match", "input": {"coins": [1, 2, 5], "amount": 5}, "expected": 1, "description": "One coin of value 5"}
+{"name": "Greedy fails", "input": {"coins": [1, 3, 4], "amount": 6}, "expected": 2, "description": "3+3 not 4+1+1"}
+{"name": "Large amount", "input": {"coins": [1, 2, 5], "amount": 100}, "expected": 20, "description": "100 with largest coins"}
+{"name": "All same coins", "input": {"coins": [3], "amount": 9}, "expected": 3, "description": "All same coin values"}
+{"name": "Multiple denominations", "input": {"coins": [1, 2, 5, 10, 20, 50, 100], "amount": 999}, "expected": 15, "description": "Multiple denominations"}
+{"name": "Cannot make amount", "input": {"coins": [2, 4, 6], "amount": 7}, "expected": -1, "description": "Odd amount with even coins"}

@@ -1,0 +1,10 @@
+# Tests for Question 11: Word Ladder
+{"name": "Basic example", "input": {"beginWord": "hit", "endWord": "cog", "wordList": ["hot","dot","dog","lot","log","cog"]}, "expected": 5, "description": "Standard example"}
+{"name": "End not in list", "input": {"beginWord": "hit", "endWord": "cog", "wordList": ["hot","dot","dog","lot","log"]}, "expected": 0, "description": "End word not in list"}
+{"name": "Same word", "input": {"beginWord": "a", "endWord": "a", "wordList": ["a"]}, "expected": 1, "description": "Same begin and end"}
+{"name": "Two words", "input": {"beginWord": "hit", "endWord": "hot", "wordList": ["hot"]}, "expected": 2, "description": "One step"}
+{"name": "Long chain", "input": {"beginWord": "red", "endWord": "tax", "wordList": ["ted","tex","red","tax","tad","den","rex","pee"]}, "expected": 4, "description": "Multi-step chain"}
+{"name": "Start equals end", "input": {"beginWord": "a", "endWord": "a", "wordList": ["a"]}, "expected": 1, "description": "Already at target"}
+{"name": "No path", "input": {"beginWord": "hit", "endWord": "hog", "wordList": ["hot","dot"]}, "expected": 0, "description": "No possible path"}
+{"name": "Direct step", "input": {"beginWord": "a", "endWord": "b", "wordList": ["b"]}, "expected": 2, "description": "Direct one-letter change"}
+{"name": "Complex path", "input": {"beginWord": "hit", "endWord": "cog", "wordList": ["hot","dot","dog","lot","log","cog","hot"]}, "expected": 5, "description": "Duplicate in list"}

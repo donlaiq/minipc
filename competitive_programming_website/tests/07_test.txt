@@ -1,0 +1,11 @@
+# Tests for Question 07: Product of Array Except Self
+{"name": "Standard example", "input": {"nums": [1, 2, 3, 4]}, "expected": [24, 12, 8, 6], "description": "Classic example"}
+{"name": "Contains zero", "input": {"nums": [-1, 1, 0, -3, 3]}, "expected": [0, 0, 9, 0, 0], "description": "Zero in the middle"}
+{"name": "Two elements", "input": {"nums": [1, 2]}, "expected": [2, 1], "description": "Minimal input"}
+{"name": "Contains negative", "input": {"nums": [-1, -2, -3, -4]}, "expected": [-24, -12, -8, -6], "description": "All negative values"}
+{"name": "Contains zero at start", "input": {"nums": [0, 1, 2, 3]}, "expected": [6, 0, 0, 0], "description": "Zero at start"}
+{"name": "Contains zero at end", "input": {"nums": [1, 2, 3, 0]}, "expected": [0, 0, 0, 6], "description": "Zero at end"}
+{"name": "Contains both zeros", "input": {"nums": [0, 1, 0, 3]}, "expected": [0, 0, 0, 0], "description": "Two zeros means all zeros"}
+{"name": "All ones", "input": {"nums": [1, 1, 1, 1]}, "expected": [1, 1, 1, 1], "description": "All elements are one"}
+{"name": "Contains 1 and 0", "input": {"nums": [1, 0]}, "expected": [0, 1], "description": "Two elements with zero"}
+{"name": "Mix with 1s", "input": {"nums": [2, 1, 3]}, "expected": [3, 6, 2], "description": "Contains 1s and non-1s"}

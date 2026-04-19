@@ -1,0 +1,8 @@
+# Tests for Question 33: Group Anagrams
+{"name": "Standard example", "input": {"strs": ["eat","tea","tan","ate","nat","bat"]}, "expected": [["bat"], ["tan", "nat"], ["eat", "tea", "ate"]], "description": "Three groups"}
+{"name": "Single element", "input": {"strs": [""]}, "expected": [[""]], "description": "Single empty string"}
+{"name": "Single char", "input": {"strs": ["a"]}, "expected": [["a"]], "description": "Single character"}
+{"name": "All same", "input": {"strs": ["abc","abc","abc"]}, "expected": [["abc","abc","abc"]], "description": "All are anagrams"}
+{"name": "All different", "input": {"strs": ["abc","def","ghi"]}, "expected": [["ghi"],["def"],["abc"]], "description": "No anagrams"}
+{"name": "Mixed case", "input": {"strs": ["abc","cba","cab"]}, "expected": [["abc","cba","cab"]], "description": "All anagrams"}
+{"name": "Mixed groups", "input": {"strs": ["a","a","ab","ba","abc","cba"]}, "expected": [["abc","cba"],["ab","ba"],["a","a"]], "description": "Multiple groups"}

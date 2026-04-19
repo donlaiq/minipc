@@ -1,0 +1,22 @@
+# Tests for Question 49: Reverse Nodes in k-Group
+{"name": "Standard example k=2", "input": {"arr": [1, 2, 3, 4, 5], "k": 2}, "expected": [2, 1, 4, 3, 5], "description": "Pairs reversed, 5 stays"}
+{"name": "Standard example k=3", "input": {"arr": [1, 2, 3, 4, 5], "k": 3}, "expected": [3, 2, 1, 4, 5], "description": "Groups of 3, remainder stays"}
+{"name": "k equals length", "input": {"arr": [1, 2, 3, 4, 5], "k": 5}, "expected": [1, 2, 3, 4, 5], "description": "Full reversal"}
+{"name": "k=1", "input": {"arr": [1, 2, 3, 4, 5], "k": 1}, "expected": [1, 2, 3, 4, 5], "description": "No change when k=1"}
+{"name": "Empty list", "input": {"arr": [], "k": 3}, "expected": [], "description": "Empty list"}
+{"name": "k larger than length", "input": {"arr": [1, 2], "k": 3}, "expected": [1, 2], "description": "Remaining nodes stay as-is"}
+{"name": "Exact groups", "input": {"arr": [1, 2, 3, 4], "k": 2}, "expected": [2, 1, 4, 3], "description": "Exact number of groups"}
+
+def make_list(arr):
+    if not arr: return None
+    head = ListNode(arr[0])
+    curr = head
+    for v in arr[1:]:
+        curr.next = ListNode(v)
+        curr = curr.next
+    return head
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next

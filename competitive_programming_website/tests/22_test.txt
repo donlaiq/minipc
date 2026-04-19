@@ -1,0 +1,22 @@
+# Tests for Question 22: Palindrome Linked List
+def make_list(arr):
+    if not arr: return None
+    head = ListNode(arr[0])
+    curr = head
+    for v in arr[1:]:
+        curr.next = ListNode(v)
+        curr = curr.next
+    return head
+
+def isPalindromeWrapper(arr):
+    head = make_list(arr)
+    return isPalindrome(head)
+
+{"name": "Standard palindrome", "input": {"arr": [1,2,2,1]}, "expected": True, "description": "1->2->2->1 is palindrome"}
+{"name": "Not palindrome", "input": {"arr": [1,2]}, "expected": False, "description": "1->2 is not palindrome"}
+{"name": "Single element", "input": {"arr": [1]}, "expected": True, "description": "Single node is palindrome"}
+{"name": "Empty list", "input": {"arr": []}, "expected": True, "description": "Empty list is palindrome"}
+{"name": "All same", "input": {"arr": [5,5,5,5,5]}, "expected": True, "description": "All elements same"}
+{"name": "Even palindrome", "input": {"arr": [1,2,3,3,2,1]}, "expected": True, "description": "Even length palindrome"}
+{"name": "Odd palindrome", "input": {"arr": [1,2,3,2,1]}, "expected": True, "description": "Odd length palindrome"}
+{"name": "Almost palindrome", "input": {"arr": [1,2,3,4,1]}, "expected": False, "description": "Almost but not palindrome"}

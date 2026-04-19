@@ -1,0 +1,29 @@
+# Tests for Question 31: Lowest Common Ancestor of BST
+def make_bst(arr):
+    if not arr: return None
+    root = TreeNode(arr[0])
+    for v in arr[1:]:
+        node = root
+        while True:
+            if v < node.val:
+                if not node.left: node.left = TreeNode(v); break
+                else: node = node.left
+            else:
+                if not node.right: node.right = TreeNode(v); break
+                else: node = node.right
+    return root
+
+def find_p_q(root, p_val, q_val):
+    return lowestCommonAncestor(root, TreeNode(p_val), TreeNode(q_val))
+
+def lcaWrapper(arr, p_val, q_val):
+    root = make_bst(arr)
+    node = find_p_q(root, p_val, q_val)
+    return node.val if node else None
+
+{"name": "LCA at root", "input": {"arr": [6,2,8,0,4,7,9,None,None,3,5], "p_val": 2, "q_val": 8}, "expected": 6, "description": "2 and 8, LCA is 6"}
+{"name": "LCA is one of the nodes", "input": {"arr": [6,2,8,0,4,7,9,None,None,3,5], "p_val": 2, "q_val": 4}, "expected": 2, "description": "2 is ancestor of 4"}
+{"name": "Both in left subtree", "input": {"arr": [5,3,8,1,4,7,9], "p_val": 1, "q_val": 4}, "expected": 3, "description": "Both in left of root"}
+{"name": "Both in right subtree", "input": {"arr": [5,3,8,1,4,7,9], "p_val": 7, "q_val": 9}, "expected": 8, "description": "Both in right of root"}
+{"name": "One is root", "input": {"arr": [5,3,8,1,4,7,9], "p_val": 5, "q_val": 3}, "expected": 5, "description": "5 is root and ancestor"}
+{"name": "Minimal BST", "input": {"arr": [5,3,8], "p_val": 3, "q_val": 8}, "expected": 5, "description": "Children of root"}

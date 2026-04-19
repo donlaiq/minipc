@@ -1,0 +1,10 @@
+# Tests for Question 23: Best Time to Buy and Sell Stock
+{"name": "Standard example", "input": {"prices": [7,1,5,3,6,4]}, "expected": 5, "description": "Buy at 1, sell at 6"}
+{"name": "Decreasing prices", "input": {"prices": [7,6,4,3,1]}, "expected": 0, "description": "No profit possible"}
+{"name": "Single element", "input": {"prices": [5]}, "expected": 0, "description": "Can only buy and sell same day"}
+{"name": "All same price", "input": {"prices": [5,5,5,5]}, "expected": 0, "description": "No price change"}
+{"name": "Buy low sell high at end", "input": {"prices": [1, 2]}, "expected": 1, "description": "Buy at 1, sell at 2"}
+{"name": "Multiple peaks", "input": {"prices": [2,4,1,5,3,7]}, "expected": 6, "description": "Buy at 1, sell at 7"}
+{"name": "Buy at first, sell at last", "input": {"prices": [1, 10]}, "expected": 9, "description": "Max profit possible"}
+{"name": "Zero price", "input": {"prices": [0, 100]}, "expected": 100, "description": "Price 0 to max"}
+{"name": "V-shape", "input": {"prices": [5, 3, 1, 2, 4, 6]}, "expected": 5, "description": "Buy at 1, sell at 6"}

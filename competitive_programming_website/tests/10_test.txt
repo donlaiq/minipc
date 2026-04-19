@@ -1,0 +1,11 @@
+# Tests for Question 10: Trapping Rain Water
+{"name": "Standard example", "input": {"height": [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]}, "expected": 6, "description": "Classic example"}
+{"name": "Large example", "input": {"height": [4, 2, 0, 3, 2, 5]}, "expected": 9, "description": "Larger case"}
+{"name": "Increasing", "input": {"height": [1, 2, 3, 4]}, "expected": 0, "description": "No water trapped"}
+{"name": "Decreasing", "input": {"height": [4, 3, 2, 1]}, "expected": 0, "description": "No water trapped"}
+{"name": "Flat", "input": {"height": [3, 3, 3, 3]}, "expected": 0, "description": "No water trapped"}
+{"name": "V-shape", "input": {"height": [5, 4, 3, 2, 1, 2, 3, 4, 5]}, "expected": 16, "description": "V-shape traps water"}
+{"name": "Single element", "input": {"height": [5]}, "expected": 0, "description": "Single element can't trap"}
+{"name": "Two elements", "input": {"height": [5, 3]}, "expected": 0, "description": "Two elements can't trap"}
+{"name": "All zeros", "input": {"height": [0, 0, 0]}, "expected": 0, "description": "Nothing to trap"}
+{"name": "Max height", "input": {"height": [10000, 10000]}, "expected": 0, "description": "Max constraint values"}

@@ -1,0 +1,5 @@
+# Tests for Question 18: Implement Trie
+{"name": "Standard insert and search", "input": {"operations": [{"op": "insert", "word": "apple"}, {"op": "search", "word": "apple"}, {"op": "search", "word": "app"}, {"op": "startsWith", "prefix": "app"}, {"op": "insert", "word": "app"}, {"op": "search", "word": "app"}]}, "expected": [True, False, True, True], "description": "Insert and search operations"}
+{"name": "Empty trie operations", "input": {"operations": [{"op": "search", "word": "a"}, {"op": "startsWith", "prefix": "a"}]}, "expected": [False, False], "description": "Operations on empty trie"}
+{"name": "Prefix before word", "input": {"operations": [{"op": "insert", "word": "app"}, {"op": "search", "word": "app"}, {"op": "search", "word": "apple"}, {"op": "startsWith", "prefix": "appl"}]}, "expected": [True, False, False], "description": "Search after inserting prefix"}
+{"name": "Overwrite duplicate", "input": {"operations": [{"op": "insert", "word": "apple"}, {"op": "insert", "word": "apple"}, {"op": "search", "word": "apple"}]}, "expected": [True], "description": "Inserting same word twice"}

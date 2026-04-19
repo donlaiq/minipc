@@ -1,0 +1,9 @@
+# Tests for Question 45: Jump Game II
+{"name": "Standard example", "input": {"nums": [2,3,1,1,4]}, "expected": 2, "description": "Jump 1 step to index 1, then 3 steps"}
+{"name": "Standard example 2", "input": {"nums": [2,3,0,1,4]}, "expected": 2, "description": "Two jumps needed"}
+{"name": "Single element", "input": {"nums": [1]}, "expected": 0, "description": "Already at destination"}
+{"name": "Two elements", "input": {"nums": [1,1]}, "expected": 1, "description": "One jump"}
+{"name": "All ones", "input": {"nums": [1,1,1,1,1]}, "expected": 4, "description": "Each element jumps 1"}
+{"name": "Huge first jump", "input": {"nums": [10,1,1,1]}, "expected": 1, "description": "Jump directly to end"}
+{"name": "Greedy optimal", "input": {"nums": [3,2,1,0,4]}, "expected": 2, "description": "Jump to index 2, then to end"}
+{"name": "Large n", "input": {"nums": [1]*10000}, "expected": 9999, "description": "All ones, n-1 jumps"}
